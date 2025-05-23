@@ -126,5 +126,3 @@ Este projeto é um **estudo simulado com fins acadêmicos e educativos**, sem ob
 
 Distribuído sob a Licença MIT.
 Consulte o arquivo `LICENSE` para mais detalhes.
-
-```
