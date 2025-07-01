@@ -22,6 +22,8 @@ Transformar os insights obtidos na Sprint 1 em ações tangíveis por meio da:
 
 Protótipo funcional desenvolvido em **Python + Streamlit**, com recursos como:
 
+- https://deteccao-cartuchos-falsificados.streamlit.app/
+
 - Filtros por **região e período**.
 - Visualização de **chamados, devoluções e NPS** por tipo e região.
 - Exportação em **PDF** com gráficos e estatísticas.
