@@ -1,123 +1,86 @@
+# Painel Executivo do Piloto — Governança & Analytics
 
-# 🧠 Análise de Indicadores por Região e Tipo de Produto
-
-Este projeto apresenta uma **análise simulada sobre os impactos da pirataria de cartuchos de tinta e toner no ecossistema da HP**, com foco na comparação entre produtos originais e genéricos (piratas) nas cinco regiões do Brasil. A abordagem combina **Business Analytics** com visualização de dados para apoiar decisões estratégicas e propor medidas de mitigação.
-
----
-
-## 🎯 Objetivos
-
-- Analisar os impactos da pirataria no volume de chamados, devoluções e NPS.
-- Gerar insights a partir de dados simulados por tipo de cartucho e região.
-- Propor soluções baseadas em tecnologia, educação e governança de IA.
-- Apresentar uma simulação realista para tomada de decisão.
-
----
-
-## 🗂️ Arquivos do Projeto
-
-- `Análise_de_Indicadores_por_Região_e_Tipo_de_Produto.ipynb`: Notebook principal com código, visualizações e explicações.
-- `relatorio_pirataria_hp.pdf`: Relatório executivo com análise, insights e propostas (gerado separadamente).
-- `README.md`: Descrição do projeto.
-
----
-
-## 👨‍💻 Tecnologias Utilizadas
-
-- Python 3.10+
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- Jupyter Notebook
-
----
-
-## 📊 Indicadores Simulados
-
-Os dados simulados consideram:
-
-- **Tipo de cartucho:** Original vs Genérico (pirata)
-- **Indicadores analisados:**
-  - Volume de chamados
-  - Taxa de devolução
-  - Net Promoter Score (NPS)
-- **Abrangência:** 5 regiões brasileiras (Sudeste, Sul, Nordeste, Centro-Oeste, Norte)
-
----
-
-## 📈 Visualizações Geradas
-
-1. **Chamados por Tipo e Região**  
-2. **Taxa de Devolução por Tipo e Região**  
-3. **NPS por Tipo e Região**
-
-Cada gráfico compara o desempenho de cartuchos originais vs genéricos por região.
-
----
-
-## 🔎 Principais Conclusões
-
-- Cartuchos genéricos geram mais chamados e devoluções.
-- A satisfação dos clientes (NPS) com produtos piratas é significativamente inferior.
-- A região Sudeste concentra os maiores volumes de problemas, exigindo ações prioritárias.
-
----
-
-## 🧩 Propostas Estratégicas
-
-### 🔒 Tecnologia
-- Etiquetas com QR Code dinâmico para validação de autenticidade.
-- Firmware adaptativo com bloqueio de cartuchos não oficiais.
-
-### 🤖 Inteligência Artificial
-- Algoritmos para detecção de padrões em marketplaces.
-- Dashboards internos para monitoramento de fornecedores suspeitos.
-
-### 📢 Educação
-- Campanhas com influenciadores e tech creators.
-- Integração com e-commerces para destacar vendedores certificados.
+Este projeto é o entregável da **Sprint 3**, consistindo em um dashboard interativo desenvolvido com Streamlit para monitorar os resultados de um piloto de Inteligência Artificial. O painel consolida métricas de performance do modelo, governança, ética (Fairness e LGPD) e impacto de negócio (ROI).
 
 ---
 
 ## 👥 Integrantes
 
-- **André Rovai** – RM555848  
-- **Thiago Almança** – RM558108  
-- **Alan de Souza** – RM557088  
-- **Leonardo Zago** – RM558691  
-- **Renan de França** – RM558413  
-- **Antonio Vinicius** – RM558014
+| Nome                | RM       |
+| ------------------- | -------- |
+| André Rovai         | RM555848 |
+| Thiago Almança      | RM558108 |
+| Alan de Souza       | RM557088 |
+| Leonardo Zago       | RM558691 |
+| Renan de França     | RM558413 |
+| Antonio Vinicius    | RM558014 |
 
 ---
 
-## 🚀 Como Executar
+## 🚀 Sobre o Projeto
 
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/analise-pirataria-hp.git
-   cd analise-pirataria-hp
-   ```
+O objetivo deste painel é fornecer uma visão 360º dos resultados do piloto para uma audiência executiva, permitindo a tomada de decisão informada sobre a continuidade do modelo (Go/No-Go). Ele integra dados de detecção, operação, fairness e negócio em uma única interface, com filtros dinâmicos e capacidade de exportação de dados.
 
-2. Instale as dependências:
-   ```bash
-   pip install pandas numpy matplotlib seaborn
-   ```
+### ✨ Funcionalidades
 
-3. Execute o notebook:
-   ```bash
-   jupyter notebook Análise_de_Indicadores_por_Região_e_Tipo_de_Produto.ipynb
-   ```
+O painel é dividido nas seguintes seções:
+
+1.  **Visão Geral**: Apresenta os principais KPIs do modelo (Precisão, Recall, FPR, FNR), comparação de metas vs. realizado e a tendência temporal de tickets e devoluções.
+2.  **Detecção & Operação**: Mostra a matriz de confusão, o tempo médio para detecção de anomalias, a fila de revisão humana (human-in-the-loop) e a taxa de override.
+3.  **Fairness & Governança**: Analisa o desempenho do modelo por diferentes segmentos (região, canal) para garantir a equidade. Inclui um "Model Card" e um resumo "LGPD mini" para transparência.
+4.  **Negócio & ROI**: Compara os resultados das iniciativas "Com Ação" vs. "Sem Ação" e calcula uma estimativa de ROI e payback para avaliar o impacto financeiro.
+5.  **Mapa Regional**: Exibe um mapa de calor com a incidência de suspeitas por região, identificando hotspots de falsificação.
+6.  **Downloads & Evidências**: Permite exportar os dados filtrados em formato CSV e gera um resumo executivo automático, além de um campo para anotações e insights.
 
 ---
 
-## 📄 Licença
+## 🛠️ Como Executar o Projeto
 
-Este projeto é de uso acadêmico e educativo, sem fins lucrativos.  
-Distribuído sob a licença [MIT](LICENSE).
+Siga os passos abaixo para executar o dashboard localmente.
+
+### Pré-requisitos
+
+-   [Python 3.8+](https://www.python.org/downloads/)
+-   `pip` (gerenciador de pacotes do Python)
+
+### Passos
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/seu-usuario/painel-executivo-piloto-ia.git
+    cd painel-executivo-piloto-ia
+    ```
+
+2.  **Crie e ative um ambiente virtual (recomendado):**
+    ```bash
+    # Windows
+    python -m venv venv
+    .\venv\Scripts\activate
+
+    # macOS / Linux
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
+
+3.  **Instale as dependências:**
+    Crie um arquivo chamado `requirements.txt` na raiz do projeto com o seguinte conteúdo:
+    ```
+    streamlit
+    pandas
+    numpy
+    plotly
+    scikit-learn
+    ```
+    Em seguida, instale as bibliotecas com o comando:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  **Execute a aplicação Streamlit:**
+    ```bash
+    streamlit run app.py
+    ```
+
+Após executar o comando, o dashboard será aberto automaticamente no seu navegador padrão.
 
 ---
-
-## 📌 Observações Finais
-
-Este estudo é **simulado** e tem como objetivo representar possíveis cenários e apoiar a aplicação prática de técnicas de análise de dados e inteligência de negócios.
